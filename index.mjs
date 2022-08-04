@@ -1,12 +1,10 @@
-console.log("i am hello world server");
 
 import express from 'express'
+ import cors from 'cors';
 const app = express()
-const port = 3000
+app.use(cors());
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+
 app.get('/home', (req, res) => {
   res.send('Hello World home!')
 })
@@ -20,6 +18,8 @@ app.get('/weather', (req, res) => {
 city:'London'
   })
 })
+const port = process.env.PORT || 3000;
+ 
 app.listen(port, () => {
   console.log(`i am hello world server ${port}`)
 
