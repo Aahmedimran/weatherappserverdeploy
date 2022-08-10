@@ -16,7 +16,9 @@ app.get('/weather', (req, res) => {
     weather:'sunny',
     temperture:20,
 city:'London'
-  })
+  })  
+
+     
 })
 const port = process.env.PORT || 3000;
  
